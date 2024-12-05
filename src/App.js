@@ -8,7 +8,7 @@ import { ThemeProvider } from './context/ThemeContext'; // 테마 컨텍스트 �
 function App() {
   return (
     <ThemeProvider> {/* 테마 제공자로 감싸서 자식 컴포넌트에 테마 정보 제공 */}
-      <Router> {/* 라우터를 사용하여 페이지 전환 관리 */}
+      <Router basename="/project-shopping-cart"> {/* GitHub Pages에서 배포된 경로 설정 */}
         <div className="app">
           <ThemeToggle /> {/* 테마 토글 버튼 */}
           <Routes> {/* Routes 컴포넌트로 라우팅 설정 */}
@@ -21,4 +21,4 @@ function App() {
   );
 }
 
-export default App; // App 컴포넌트를 기본 내보내기
+export default App; // App 컴포넌트를 내보내기
