@@ -1,0 +1,144 @@
+:root {
+  --bg-color: #ffffff; /* 기본 배경색 */
+  --text-color: #000000; /* 기본 텍스트 색상 */
+  --card-bg: #f9f9f9; /* 카드 배경색 */
+  --header-bg: #f1f1f1; /* 헤더 배경색 */
+  --border-color: #dddddd; /* 테두리 색상 */
+}
+
+body.dark {
+  --bg-color: #121212; /* 다크 모드 배경색 */
+  --text-color: #ffffff; /* 다크 모드 텍스트 색상 */
+  --card-bg: #1e1e1e; /* 다크 모드 카드 배경색 */
+  --header-bg: #2c2c2c; /* 다크 모드 헤더 배경색 */
+  --border-color: #333333; /* 다크 모드 테두리 색상 */
+}
+
+body {
+  margin: 0; /* 기본 여백 제거 */
+  font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+  background-color: var(--bg-color); /* 배경색 설정 */
+  color: var(--text-color); /* 텍스트 색상 설정 */
+}
+
+.app {
+  min-height: 100vh; /* 최소 높이를 100vh로 설정 */
+}
+
+header {
+  background-color: var(--header-bg); /* 헤더 배경색 설정 */
+  padding: 20px; /* 패딩 추가 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.main-content {
+  padding: 20px; /* 메인 콘텐츠 패딩 추가 */
+}
+
+.product-grid {
+  display: flex; /* Flexbox 사용 */
+  flex-wrap: wrap; /* 카드가 여러 줄로 배치되도록 */
+  justify-content: space-around; /* 카드 간 간격 조정 */
+  gap: 20px; /* 카드 간 간격 */
+  padding: 20px; /* 패딩 추가 */
+}
+
+.product-card {
+  background-color: var(--card-bg); /* 카드 배경색 설정 */
+  padding: 20px; /* 카드 패딩 증가 */
+  border-radius: 10px; /* 둥근 모서리 */
+  width: 300px; /* 카드 고정 너비 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  border: 1px solid var(--border-color); /* 테두리 설정 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  transition: transform 0.2s; /* 확대 효과 */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* 호버 시 확대 효과 */
+}
+
+.cart-page {
+  padding: 40px; /* 장바구니 페이지 패딩 증가 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+button {
+  padding: 10px 15px; /* 버튼 패딩 증가 */
+  background-color: #00c3ff; /* 버튼 배경색 */
+  border: none; /* 테두리 제거 */
+  color: white; /* 버튼 텍스트 색상 */
+  border-radius: 5px; /* 둥근 모서리 */
+  cursor: pointer; /* 커서 포인터 변경 */
+  transition: background-color 0.3s; /* 호버 효과 */
+}
+
+button:hover {
+  background-color: #ff5ad0; /* 호버 시 색상 변화 */
+}
+
+.back-link {
+  display: block; /* 블록 요소로 설정 */
+  margin-top: 20px; /* 위쪽 여백 */
+  text-decoration: none; /* 밑줄 제거 */
+  color: #2196F3; /* 링크 색상 */
+}
+
+.back-link:hover {
+  text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+h1 {
+  font-size: 2.5em; /* 제목 크기 설정 */
+  margin-bottom: 20px; /* 제목 아래 여백 */
+}
+
+.total-price {
+  font-size: 1.5em; /* 총액 크기 설정 */
+  color: #b22222; /* 강조 색상 */
+}
+
+/* 추가 스타일 예시 */
+.footer {
+  background-color: var(--header-bg); /* 푸터 배경색 설정 */
+  padding: 10px; /* 푸터 패딩 추가 */
+  text-align: center; /* 푸터 텍스트 가운데 정렬 */
+}
+
+.section {
+  margin: 20px 0; /* 섹션 위와 아래 여백 */
+  padding: 15px; /* 섹션 패딩 추가 */
+  border: 1px solid var(--border-color); /* 섹션 테두리 설정 */
+  border-radius: 5px; /* 섹션 둥근 모서리 */
+}
+
+.product-card img {
+  width: 100%; /* 이미지 카드 너비에 맞춤 */
+  height: 300px; /* 이미지 높이 고정 */
+  object-fit: cover; /* 비율 유지하면서 잘림 방지 */
+  border-radius: 8px; /* 이미지 테두리 둥글게 */
+}
+
+.cart-link {
+  display: block; /* 블록 요소로 설정 */
+  text-align: center; /* 가운데 정렬 */
+  margin-top: 20px; /* 위쪽 여백 */
+  color: #2196F3; /* 링크 색상 */
+  font-size: 1.2em; /* 폰트 크기 조정 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+.cart-link:hover {
+  text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+.product-details {
+  display: flex; /* Flexbox 사용 */
+  justify-content: space-between; /* 각 요소 간 간격 조정 */
+  align-items: center; /* 수직 중앙 정렬 */
+  margin-top: 10px; /* 위쪽 여백 */
+}
+
+.quantity {
+  margin-right: 10px; /* 수량과 버튼 간의 여백 */
+}
